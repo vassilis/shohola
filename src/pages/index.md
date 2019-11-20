@@ -2,15 +2,22 @@
 templateKey: index-page
 title: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Donate
+subheading: Support
 mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  title: Profile
+  description: >-
+    The Shohola Scholarship Foundation is a not-for-profit, 501(c)(3),
+    corporation. The money raised through your charity goes directly to support
+    tuition for boys at Camp Shohola. The foundation pays a deeply discounted
+    tuition for each child, thus assuring that all funds donated benefit the
+    child in need.
+
+
+    The foundation's director is Frank "Kit" Barger, now retired director of
+    Camp Shohola. Now that Kit has turned the keys to camp over to his son
+    Duncan, his primary focus, is to share the joy and the dream of Camp Shohola
+    with those that may not otherwise be able to attend.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
@@ -45,12 +52,11 @@ intro:
         space where you can hang out with fellow coffee lovers and learn about
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  heading: The Camp
+  description: >-
+    Camp Shohola is a third generation traditional boys summer camp, located in
+    the mountains of northeastern Pennsylvania, and accredited by the American
+    Camp Association. Learn more about the camp.
 main:
   heading: Great coffee with no compromises
   description: >
