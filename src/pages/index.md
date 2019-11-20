@@ -3,7 +3,7 @@ templateKey: index-page
 title: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
 heading: Donate
-subheading: Support
+subheading: Donate now
 mainpitch:
   title: Profile
   description: >-
@@ -74,3 +74,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
