@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience xxxxxx
+title: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
