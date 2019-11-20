@@ -27,10 +27,10 @@ export const IndexPageTemplate = ({
             <div
                 style={{
                     display: 'flex',
-                    height: '150px',
+                    height: '200px',
                     lineHeight: '1',
                     justifyContent: 'space-around',
-                    alignItems: 'left',
+                    alignItems: 'center',
                     flexDirection: 'column',
                 }}
             >
@@ -38,55 +38,47 @@ export const IndexPageTemplate = ({
                     className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                     style={{
                         color: 'white',
-                        lineHeight: '1',
-                        padding: '0.25em',
+                        textShadow: '0 0 20px #000, 0 1px 1px #333',
                     }}
                 >
                     {title}
                 </h1>
-                <h3
-                    className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-                    style={{
-                        color: 'white',
-                        lineHeight: '1',
-                        padding: '0.25em',
-                    }}
+                <a
+                    href="https://donatenow.networkforgood.org/shoholascholarship"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="button is-large btn-donate"
                 >
-                    {subheading}
-                </h3>
+          Donate Now
+                </a>
             </div>
         </div>
-        <section className="section section--gradient">
-            <div className="container">
-                <div className="section">
-                    <div className="columns">
-                        <div className="column is-10 is-offset-1">
-                            <div className="content">
-                                <div className="content">
-                                    <div className="tile">
-                                        <h2 className="title">{mainpitch.title}</h2>
-                                    </div>
-                                    <div className="">
-                                        <p className="">{mainpitch.description}</p>
-                                    </div>
-                                </div>
-                                <div className="columns">
-                                    <div className="column is-6">
-                                        <h3 className="">Latest stories</h3>
-                                        <BlogRoll />
-                                        <div className="column is-12 has-text-centered">
-                                            <Link className="btn" to="/blog">
-                        More Stories
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <div className="container" style={{ marginTop: 50 }}>
+            <div class="content">
+                <h2 className="title">{mainpitch.title}</h2>
+                <p className="">{mainpitch.description}</p>
+                <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
+                    <div className="column is-6">
+                        <h3 className="">Latest stories</h3>
+                        <BlogRoll />
+                        <div className="column is-12 has-text-centered">
+                            <Link className="btn" to="/blog">
+                More Stories
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="column is-6">
+                        <h3 className="">Events</h3>
+                        <BlogRoll />
+                        <div className="column is-12 has-text-centered">
+                            <Link className="btn" to="/blog">
+                Previous Events
+                            </Link>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 );
 
