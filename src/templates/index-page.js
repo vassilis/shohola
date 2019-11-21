@@ -55,7 +55,7 @@ export const IndexPageTemplate = ({
     </div>
     <div className="container" style={{ marginTop: 50 }}>
       <div className="columns">
-        <div className="column">
+        <div className="column is-8">
           <strong className="">{profile.title}</strong>
           <p className="">{profile.description}</p>
           <br />
@@ -65,8 +65,15 @@ export const IndexPageTemplate = ({
           <strong className="">{camp.title}</strong>
           <p className="">{camp.description}</p>
         </div>
-        <div className="column">
-          <img src={profileImage} alt={title} />
+        <div className="column is-4">
+          <img
+            src={`url(${
+              profileImage.childImageSharp
+                ? profileImage.childImageSharp.fluid.src
+                : profileImage
+            })`}
+            alt={title}
+          />
         </div>
       </div>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
