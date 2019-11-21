@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../components/Layout';
-import BlogRoll from '../../components/BlogRoll';
+import EventsRoll from '../../components/EventsRoll';
 
 export default function BlogIndexPage() {
   return (
@@ -21,13 +21,13 @@ export default function BlogIndexPage() {
             padding: '1rem',
           }}
         >
-          Latest Stories
+          Events
         </h1>
       </div>
       <section className="section">
         <div className="container">
           <div className="content">
-            <BlogRoll />
+            <EventsRoll />
           </div>
         </div>
       </section>
