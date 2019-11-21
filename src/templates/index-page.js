@@ -44,14 +44,9 @@ export const IndexPageTemplate = ({
         >
           {heading}
         </h1>
-        <a
-          href="https://donatenow.networkforgood.org/shoholascholarship"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="button is-large btn-donate"
-        >
+        <Link to="/donate" className="button is-large btn-donate">
           Donate Now
-        </a>
+        </Link>
       </div>
     </div>
     <div className="container" style={{ marginTop: 50 }}>
