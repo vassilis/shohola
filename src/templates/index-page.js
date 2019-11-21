@@ -108,10 +108,9 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        profile={frontmatter.profile}
+        mission={frontmatter.mission}
+        camp={frontmatter.camp}
       />
     </Layout>
   );
