@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
-import Features from '../components/Features';
+// import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  profile,
+  mission,
+  camp,
 }) => (
   <div>
     <div
@@ -41,7 +40,7 @@ export const IndexPageTemplate = ({
             textShadow: '0 0 20px #000, 0 1px 1px #333',
           }}
         >
-          {title}
+          {heading}
         </h1>
         <a
           href="https://donatenow.networkforgood.org/shoholascholarship"
@@ -56,10 +55,16 @@ export const IndexPageTemplate = ({
     <div className="container" style={{ marginTop: 50 }}>
       <div className="columns">
         <div className="column">
-          <strong className="">{mainpitch.title}</strong>
-          <p className="">{mainpitch.description}</p>
+          <strong className="">{profile.title}</strong>
+          <p className="">{profile.description}</p>
         </div>
-        <div className="column" />
+        <div className="column">
+          <strong className="">{mission.title}</strong>
+          <p className="">{mission.description}</p>
+          <br />
+          <strong className="">{camp.title}</strong>
+          <p className="">{camp.description}</p>
+        </div>
       </div>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
         <div className="column is-6">
@@ -86,15 +91,12 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  profile: PropTypes.object.isRequired,
+  mission: PropTypes.string.isRequired,
+  camp: PropTypes.string.isRequired,
 };
 
 const IndexPage = ({ data }) => {
@@ -138,24 +140,16 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
-        mainpitch {
+        profile {
           title
           description
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
+        mission {
+          title
+          description
+        }
+        camp {
+          title
           description
         }
       }
