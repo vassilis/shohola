@@ -8,6 +8,7 @@ import BlogRoll from '../components/BlogRoll';
 
 export const IndexPageTemplate = ({
   image,
+  profileImage,
   title,
   heading,
   profile,
@@ -57,13 +58,15 @@ export const IndexPageTemplate = ({
         <div className="column">
           <strong className="">{profile.title}</strong>
           <p className="">{profile.description}</p>
-        </div>
-        <div className="column">
+          <br />
           <strong className="">{mission.title}</strong>
           <p className="">{mission.description}</p>
           <br />
           <strong className="">{camp.title}</strong>
           <p className="">{camp.description}</p>
+        </div>
+        <div className="column">
+          <img src={profileImage} alt={title} />
         </div>
       </div>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
@@ -92,6 +95,8 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  profileImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    .isRequired,
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   profile: PropTypes.object.isRequired,
@@ -106,6 +111,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        profileImage={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         profile={frontmatter.profile}
@@ -134,6 +140,13 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        profileImage {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
