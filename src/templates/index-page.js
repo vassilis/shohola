@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        profileImage={frontmatter.image}
+        profileImage={frontmatter.profileImage}
         title={frontmatter.title}
         heading={frontmatter.heading}
         profile={frontmatter.profile}

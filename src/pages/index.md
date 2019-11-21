@@ -3,6 +3,7 @@ templateKey: index-page
 title: Shohola Sholarship
 heading: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
+profileImage: /img/inner-page-landsports.jpg
 mission:
   description: >-
     The Shohola Scholarship Foundation has a dual mission. We seek to aid boys
@@ -38,4 +39,3 @@ camp:
     Camp Association. Learn more about the camp.
   title: The Camp
 ---
-
