@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 // import Features from '../components/Features';
 import BlogRoll from '../components/BlogRoll';
+import EventsRoll from '../components/EventsRoll';
 
 export const IndexPageTemplate = ({
   image,
@@ -88,10 +89,10 @@ export const IndexPageTemplate = ({
         </div>
         <div className="column is-6">
           <h3 className="">Events</h3>
-          <BlogRoll />
+          <EventsRoll />
           <div className="column is-12 has-text-centered">
             <Link className="button" to="/blog">
-              Previous Events
+              More Events
             </Link>
           </div>
         </div>
