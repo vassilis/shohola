@@ -66,13 +66,13 @@ export const IndexPageTemplate = ({
           <strong className="">{camp.title}</strong>
           <p className="">{camp.description}</p>
         </div>
-        <div className="column is-4">
+        <div className="column is-4" style={{ textAlign: 'right' }}>
           <img
-            src={`url(${
+            src={
               profileImage.childImageSharp
                 ? profileImage.childImageSharp.fluid.src
                 : profileImage
-            })`}
+            }
             alt={title}
           />
         </div>
