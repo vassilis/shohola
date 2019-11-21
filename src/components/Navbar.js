@@ -41,7 +41,11 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" title="Shohola Scholarship">
+            <Link
+              to="/"
+              title="Shohola Scholarship"
+              style={{ display: "flex" }}
+            >
               <img src={logo} alt="Shohola Scholarship" />
             </Link>
             {/* Hamburger menu */}

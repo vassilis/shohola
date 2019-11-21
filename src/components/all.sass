@@ -19,9 +19,6 @@ $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
-.navbar .navbar-menu
-  box-shadow: none !important
-
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -89,9 +86,6 @@ $menu-label-color: $white-ter
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
-  color: $primary
-
 .icon svg
   width: 1.5rem
   height: 1.5rem
@@ -99,14 +93,18 @@ $menu-label-color: $white-ter
 
 .navbar
   background-image: url('../img/header-bg.png')
+  border-bottom: 1px solid #01331c
   .navbar-item
     color: white
+    .icon
+      color: $primary
     &:hover
       color: gold
-
-.navbar-brand
-  .navbar-item.logo
-    padding: 0 1rem
+  .navbar-menu
+    box-shadow: none !important
+  .navbar-brand
+    .navbar-item.logo
+      padding: 0 1rem
 
 .footer
   padding: 3rem 0rem 6rem
