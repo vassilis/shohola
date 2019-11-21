@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-title: Give a boy the chance to experience Camp Shohola
-image: /img/inner-page-landsports.jpg
+title: Shohola Sholarship
 heading: Give a boy the chance to experience Camp Shohola
-subheading: Give a boy the chance to experience Camp Shohola
+image: /img/inner-page-landsports.jpg
 mission:
   description: >-
     The Shohola Scholarship Foundation has a dual mission. We seek to aid boys
