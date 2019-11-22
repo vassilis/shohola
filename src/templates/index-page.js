@@ -74,22 +74,38 @@ export const IndexPageTemplate = ({
       </div>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
         <div className="column is-6">
-          <h3 className="">Latest stories</h3>
-          <BlogRoll />
-          <div className="column is-12 has-text-centered">
-            <Link className="button" to="/blog">
-              More Stories
-            </Link>
-          </div>
+          <iframe
+            title="Register to our Newsletter"
+            src="https://382c74b4.sibforms.com/serve/MUIEAOUiU7hIuySp5vq2Id2nfH-Pbt_V38X1F2ZxBuMnd3owz25JLJWEslauVYBXIKUAbmHOsz7qPnCnXj6HDN9E-1tbdlTDkeBu9Y-Km-kAxf9Uc1FkMkrmep1skvYHfTHJExG6MD79zD-FxZiSsZfCYc3X0TteK0lFxEL1x1QrnYiwGuTBvIM4gfN1r8fc_pChIgBSkmKw13Yp"
+            width="100%"
+            height="800"
+            frameBorder="0"
+            scrolling="auto"
+            allowFullScreen
+            style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              maxWidth: '100%',
+            }}
+          />
         </div>
         <div className="column is-6">
-          <h3 className="">Events</h3>
-          <EventsRoll />
-          <div className="column is-12 has-text-centered">
-            <Link className="button" to="/blog">
-              More Events
-            </Link>
-          </div>
+          <iframe
+            title="facebook page"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCampShohola%2F&amp;tabs=timeline&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=179369728884107"
+            width="100%"
+            height="800"
+            scrolling="auto"
+            allowFullScreen
+            allowTransparency="true"
+            allow="encrypted-media"
+            style={{
+              display: 'block',
+              width: '100%',
+              height: 800,
+            }}
+          />
         </div>
       </div>
     </div>
