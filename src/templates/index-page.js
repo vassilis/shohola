@@ -2,76 +2,82 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 
+import { Grid, Button, Box } from '@material-ui/core';
+import Container from '@material-ui/core/Container';
+import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 // import Features from '../components/Features';
-import BlogRoll from '../components/BlogRoll';
-import EventsRoll from '../components/EventsRoll';
+// import BlogRoll from '../components/BlogRoll';
+// import EventsRoll from '../components/EventsRoll';
 
-export const IndexPageTemplate = ({
-  image,
-  profileImage,
-  title,
-  heading,
-  profile,
-  mission,
-  camp,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <div
+const useStyles = makeStyles(theme => ({
+  header: {
+    height: 500,
+  },
+}));
+
+function IndexPageTemplate(props) {
+  const { image, profileImage, title, heading, profile, mission, camp } = props;
+  const classes = useStyles();
+  return (
+    <>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        className={classes.header}
         style={{
-          display: 'flex',
-          height: '200px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          flexDirection: 'column',
+          backgroundImage: `url(${
+            image.childImageSharp ? image.childImageSharp.fluid.src : image
+          })`,
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <div
           style={{
-            color: 'white',
-            textShadow: '0 0 20px #000, 0 1px 1px #333',
+            display: 'flex',
+            height: '200px',
+            lineHeight: '1',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            flexDirection: 'column',
           }}
         >
-          {heading}
-        </h1>
-        <Link to="/donate" className="button is-large btn-donate">
-          Donate Now
-        </Link>
-      </div>
-    </div>
-    <div className="container" style={{ marginTop: 50 }}>
-      <div className="columns">
-        <div className="column is-8">
-          <strong className="">{profile.title}</strong>
-          <p className="">{profile.description}</p>
-          <br />
-          <strong className="">{mission.title}</strong>
-          <p className="">{mission.description}</p>
-          <br />
-          <strong className="">{camp.title}</strong>
-          <p className="">{camp.description}</p>
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              color: 'white',
+              textShadow: '0 0 20px #000, 0 1px 1px #333',
+            }}
+          >
+            {heading}
+          </h1>
+          <Button
+            component={Link}
+            to="/donate"
+            variant="contained"
+            color="primary"
+            size="large"
+          >
+            Donate Now
+          </Button>
         </div>
-        <div className="column is-4" style={{ textAlign: 'right' }}>
-          <img
-            src={
-              profileImage.childImageSharp
-                ? profileImage.childImageSharp.fluid.src
-                : profileImage
-            }
-            alt={title}
-          />
-        </div>
-      </div>
+      </Box>
+      <Container fixed>
+        <Grid container spacing={5} style={{ marginTop: 50 }}>
+          <Grid item lg={4}>
+            <strong className="">{profile.title}</strong>
+            <p className="">{profile.description}</p>
+          </Grid>
+          <Grid item lg={4}>
+            <strong className="">{mission.title}</strong>
+            <p className="">{mission.description}</p>
+          </Grid>
+          <Grid item lg={4}>
+            <strong className="">{camp.title}</strong>
+            <p className="">{camp.description}</p>
+          </Grid>
+        </Grid>
+      </Container>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
         <div className="column is-6">
           <iframe
@@ -108,9 +114,9 @@ export const IndexPageTemplate = ({
           />
         </div>
       </div>
-    </div>
-  </div>
-);
+    </>
+  );
+}
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
@@ -124,6 +130,7 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
+  const classes = useStyles();
   const { frontmatter } = data.markdownRemark;
 
   return (

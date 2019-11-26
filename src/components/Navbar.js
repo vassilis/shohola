@@ -1,87 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import github from '../img/github-icon.svg';
+import { makeStyles } from '@material-ui/core/styles';
+// import { url } from 'inspector';
+import { AppBar, Toolbar } from '@material-ui/core';
 import logo from '../img/header.png';
+import bg from '../img/header-bg.png';
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    };
-  }
+const useStyles = makeStyles(theme => ({
+  navbar: {
+    backgroundImage: `url(${bg})`,
+  },
+}));
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            });
-      },
-    );
+function Navbar() {
+  const [state, setState] = useState({
+    active: false,
+    navBarActiveClass: '',
+  });
+  const classes = useStyles();
+
+  const toggleHamburger = () => {
+    setState({
+      active: !state.active,
+      navBarActiveClass: state.active ? 'is-active' : '',
+    });
   };
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link
-              to="/"
-              title="Shohola Scholarship"
-              style={{ display: 'flex' }}
-            >
-              <img src={logo} alt="Shohola Scholarship" />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  return (
+    <AppBar position="static" className={classes.navbar}>
+      <Toolbar>
+        <div className="navbar-brand">
+          <Link to="/" title="Shohola Scholarship" style={{ display: 'flex' }}>
+            <img src={logo} alt="Shohola Scholarship" />
+          </Link>
+          {/* Hamburger menu */}
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-burger burger ${state.navBarActiveClass}`}
+            data-target="navMenu"
+            onClick={() => toggleHamburger()}
+            onKeyDown={() => toggleHamburger()}
+            role="button"
+            tabIndex={0}
           >
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Stories
-              </Link>
-              <Link className="navbar-item" to="/events">
-                Events
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
+            <span />
+            <span />
+            <span />
           </div>
         </div>
-      </nav>
-    );
-  }
-};
+        <div id="navMenu" className={`navbar-menu ${state.navBarActiveClass}`}>
+          <div className="navbar-end has-text-centered">
+            <Link className="navbar-item" to="/about">
+              About
+            </Link>
+            <Link className="navbar-item" to="/blog">
+              Stories
+            </Link>
+            <Link className="navbar-item" to="/events">
+              Events
+            </Link>
+            <Link className="navbar-item" to="/contact">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
+}
 
 export default Navbar;
