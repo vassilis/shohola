@@ -19,8 +19,6 @@ export const DonatePageTemplate = ({ title, content, contentComponent }) => {
                 width="100%"
                 height="1520"
                 frameBorder="0"
-                marginWidth="0"
-                marginHeight="0"
                 scrolling="no"
                 allowFullScreen
               />

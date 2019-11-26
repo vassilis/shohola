@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-
-import { Grid, Button, Box } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
+import {
+  Grid,
+  Button,
+  Box,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  Typography,
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 // import Features from '../components/Features';
 // import BlogRoll from '../components/BlogRoll';
 // import EventsRoll from '../components/EventsRoll';
+import jumping from '../img/jumping.jpg';
+import paulsesay from '../img/paulsesay.jpg';
+import roadtrip from '../img/roadtrip.jpg';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -16,9 +28,33 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: '50%',
   },
+  heading: {
+    fontSize: '4rem',
+    color: 'white',
+    textShadow: '0 0 20px #000, 0 1px 1px #333',
+  },
+  boxes: {
+    position: 'relative',
+    top: -150,
+    backgroundColor: theme.palette.common.white,
+  },
+  card: {
+    height: '100%',
+  },
+  media: {
+    height: 200,
+    position: 'relative',
+  },
+  title: {
+    position: 'absolute',
+    bottom: 0,
+    left: 16,
+    fontWeight: 'bold',
+    color: theme.palette.common.white,
+  },
 }));
 
-function IndexPageTemplate(props) {
+export function IndexPageTemplate(props) {
   const { image, profileImage, title, heading, profile, mission, camp } = props;
   const classes = useStyles();
   return (
@@ -34,51 +70,116 @@ function IndexPageTemplate(props) {
           })`,
         }}
       >
-        <div
-          style={{
-            display: 'flex',
-            height: '200px',
-            lineHeight: '1',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexDirection: 'column',
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <Container fixed>
+          <div
             style={{
-              color: 'white',
-              textShadow: '0 0 20px #000, 0 1px 1px #333',
+              display: 'flex',
+              height: '200px',
+              lineHeight: '1',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+              flexDirection: 'column',
             }}
           >
-            {heading}
-          </h1>
-          <Button
-            component={Link}
-            to="/donate"
-            variant="contained"
-            color="primary"
-            size="large"
-          >
-            Donate Now
-          </Button>
-        </div>
+            <h1 className={classes.heading}>{heading}</h1>
+            <Button
+              component={Link}
+              to="/donate"
+              variant="contained"
+              color="primary"
+              size="large"
+            >
+              Donate Now
+            </Button>
+          </div>
+        </Container>
       </Box>
       <Container fixed>
-        <Grid container spacing={5} style={{ marginTop: 50 }}>
-          <Grid item lg={4}>
-            <strong className="">{profile.title}</strong>
-            <p className="">{profile.description}</p>
+        <Box className={classes.boxes} p={2} borderRadius={5}>
+          <Grid container spacing={2}>
+            <Grid item lg={4}>
+              <Card className={classes.card} elevation={0}>
+                <CardMedia
+                  className={classes.media}
+                  image={jumping}
+                  title={profile.title}
+                >
+                  <Typography
+                    className={classes.title}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {profile.title}
+                  </Typography>
+                </CardMedia>
+                <CardContent>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {profile.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item lg={4}>
+              <Card className={classes.card} elevation={0}>
+                <CardMedia
+                  className={classes.media}
+                  image={paulsesay}
+                  title={mission.title}
+                >
+                  <Typography
+                    className={classes.title}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {mission.title}
+                  </Typography>
+                </CardMedia>
+                <CardContent>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {mission.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item lg={4}>
+              <Card className={classes.card} elevation={0}>
+                <CardMedia
+                  className={classes.media}
+                  image={roadtrip}
+                  title={camp.title}
+                >
+                  <Typography
+                    className={classes.title}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {camp.title}
+                  </Typography>
+                </CardMedia>
+                <CardContent>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {camp.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
-          <Grid item lg={4}>
-            <strong className="">{mission.title}</strong>
-            <p className="">{mission.description}</p>
-          </Grid>
-          <Grid item lg={4}>
-            <strong className="">{camp.title}</strong>
-            <p className="">{camp.description}</p>
-          </Grid>
-        </Grid>
+        </Box>
       </Container>
       <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
         <div className="column is-6">
@@ -98,7 +199,7 @@ function IndexPageTemplate(props) {
             }}
           />
         </div>
-        <div className="column is-6">
+        {/* <div className="column is-6">
           <iframe
             title="facebook page"
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCampShohola%2F&amp;tabs=timeline&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId=179369728884107&amp;width=800&amp;height=800"
@@ -114,7 +215,7 @@ function IndexPageTemplate(props) {
               height: 800,
             }}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

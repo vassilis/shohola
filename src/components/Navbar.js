@@ -2,13 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 // import { url } from 'inspector';
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, Button, Box } from '@material-ui/core';
 import logo from '../img/header.png';
 import bg from '../img/header-bg.png';
 
 const useStyles = makeStyles(theme => ({
   navbar: {
     backgroundImage: `url(${bg})`,
+  },
+  menu: {
+    marginLeft: 'auto',
+  },
+  link: {
+    color: theme.palette.common.white,
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -47,22 +55,20 @@ function Navbar() {
             <span />
           </div>
         </div>
-        <div id="navMenu" className={`navbar-menu ${state.navBarActiveClass}`}>
-          <div className="navbar-end has-text-centered">
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-            <Link className="navbar-item" to="/blog">
-              Stories
-            </Link>
-            <Link className="navbar-item" to="/events">
-              Events
-            </Link>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-          </div>
-        </div>
+        <Box className={`${classes.menu} ${state.navBarActiveClass}`}>
+          <Button component={Link} className={classes.link} to="#">
+            About
+          </Button>
+          <Button component={Link} className={classes.link} to="#">
+            Stories
+          </Button>
+          <Button component={Link} className={classes.link} to="#">
+            Events
+          </Button>
+          <Button component={Link} className={classes.link} to="#">
+            Contact
+          </Button>
+        </Box>
       </Toolbar>
     </AppBar>
   );
