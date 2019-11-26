@@ -6,8 +6,6 @@ import {
   Button,
   Box,
   Card,
-  CardActionArea,
-  CardActions,
   CardContent,
   CardMedia,
   Container,
@@ -22,6 +20,7 @@ import jumping from '../img/jumping.jpg';
 import paulsesay from '../img/paulsesay.jpg';
 import roadtrip from '../img/roadtrip.jpg';
 import testimonials from '../img/testimonials.jpg';
+import gallery from '../img/gallery.jpg';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -50,6 +49,17 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     left: 16,
     fontWeight: 'bold',
+    color: theme.palette.common.white,
+  },
+  gallery: {
+    height: 500,
+    backgroundImage: `url(${gallery})`,
+    backgroundSize: 'cover',
+  },
+  galleryTitle: {
+    color: theme.palette.common.white,
+  },
+  galleryLink: {
     color: theme.palette.common.white,
   },
 }));
@@ -179,6 +189,52 @@ export function IndexPageTemplate(props) {
             </Grid>
           </Grid>
         </Box>
+      </Container>
+      <Box className={classes.gallery} my={5}>
+        <Container fixed>
+          <Box py={5}>
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              className={classes.galleryTitle}
+            >
+              Shohola Photo Archive
+            </Typography>
+            <Box>
+              <a href="#" className={classes.galleryLink}>
+                1950 - 1960
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                1960 - 1970
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                1970 - 1980
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                1980 - 1990
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                1990 - 2000
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                2000 - 2010
+              </a>
+              <br />
+              <a href="#" className={classes.galleryLink}>
+                2010 - 2019
+              </a>
+              <br />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+      <Container fixed>
         <Box bgcolor="white" borderRadius={5} my={5}>
           <img src={testimonials} alt="testimonials" />
         </Box>
