@@ -12,7 +12,9 @@ import Layout from '../components/Layout';
 
 const useStyles = makeStyles(theme => ({
   header: {
-    height: 500,
+    height: 800,
+    backgroundSize: 'cover',
+    backgroundPosition: '50%',
   },
 }));
 
