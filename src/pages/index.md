@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Shohola Sholarship
 heading: Give a boy the chance to experience Camp Shohola
-image: /img/jumping.jpg
+image: /img/inner-page-landsports.jpg
 profileImage: /img/directors.jpg
 mission:
   description: >-
