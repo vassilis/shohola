@@ -21,6 +21,7 @@ import Layout from '../components/Layout';
 import jumping from '../img/jumping.jpg';
 import paulsesay from '../img/paulsesay.jpg';
 import roadtrip from '../img/roadtrip.jpg';
+import testimonials from '../img/testimonials.jpg';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -34,8 +35,7 @@ const useStyles = makeStyles(theme => ({
     textShadow: '0 0 20px #000, 0 1px 1px #333',
   },
   boxes: {
-    position: 'relative',
-    top: -150,
+    marginTop: -150,
     backgroundColor: theme.palette.common.white,
   },
   card: {
@@ -74,7 +74,6 @@ export function IndexPageTemplate(props) {
           <div
             style={{
               display: 'flex',
-              height: '200px',
               lineHeight: '1',
               justifyContent: 'space-around',
               alignItems: 'center',
@@ -180,9 +179,10 @@ export function IndexPageTemplate(props) {
             </Grid>
           </Grid>
         </Box>
-      </Container>
-      <div className="columns" style={{ marginTop: 50, marginBottom: 100 }}>
-        <div className="column is-6">
+        <Box bgcolor="white" borderRadius={5} my={5}>
+          <img src={testimonials} alt="testimonials" />
+        </Box>
+        <Box bgcolor="white" borderRadius={5} my={5}>
           <iframe
             title="Register to our Newsletter"
             src="https://382c74b4.sibforms.com/serve/MUIEAOUiU7hIuySp5vq2Id2nfH-Pbt_V38X1F2ZxBuMnd3owz25JLJWEslauVYBXIKUAbmHOsz7qPnCnXj6HDN9E-1tbdlTDkeBu9Y-Km-kAxf9Uc1FkMkrmep1skvYHfTHJExG6MD79zD-FxZiSsZfCYc3X0TteK0lFxEL1x1QrnYiwGuTBvIM4gfN1r8fc_pChIgBSkmKw13Yp"
@@ -198,8 +198,9 @@ export function IndexPageTemplate(props) {
               maxWidth: '100%',
             }}
           />
-        </div>
-        {/* <div className="column is-6">
+        </Box>
+      </Container>
+      {/* <div className="column is-6">
           <iframe
             title="facebook page"
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCampShohola%2F&amp;tabs=timeline&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId=179369728884107&amp;width=800&amp;height=800"
@@ -216,7 +217,6 @@ export function IndexPageTemplate(props) {
             }}
           />
         </div> */}
-      </div>
     </>
   );
 }
