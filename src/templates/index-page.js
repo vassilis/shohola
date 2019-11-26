@@ -284,8 +284,8 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   profile: PropTypes.object.isRequired,
-  mission: PropTypes.string.isRequired,
-  camp: PropTypes.string.isRequired,
+  mission: PropTypes.object.isRequired,
+  camp: PropTypes.object.isRequired,
 };
 
 const IndexPage = ({ data }) => {

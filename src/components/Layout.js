@@ -27,35 +27,43 @@ const TemplateWrapper = ({ children }) => {
         />
         <link
           rel="apple-touch-icon"
-          sizes="180x180"
-          href={`${withPrefix('/')}img/apple-touch-icon.png`}
+          sizes="152x152"
+          href={`${withPrefix('/')}img/favicon/apple-touch-icon.png`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-32x32.png`}
           sizes="32x32"
+          href={`${withPrefix('/')}img/favicon/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-16x16.png`}
           sizes="16x16"
+          href={`${withPrefix('/')}img/favicon/favicon-16x16.png`}
         />
-
+        <link
+          rel="manifest"
+          href={`${withPrefix('/')}img/favicon/site.webmanifest`}
+        />
         <link
           rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
+          href={`${withPrefix(
+            '/',
+          )}img/favicon/safari-pinned-tab.svg" color="#005129`}
         />
-        <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
+        <link
+          rel="shortcut icon"
+          href={`${withPrefix('/')}img/favicon/favicon.ico`}
+        />
+        <meta name="apple-mobile-web-app-title" content="Shohola" />
+        <meta name="application-name" content="Shohola" />
+        <meta name="msapplication-TileColor" content="#005129" />
         <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          name="msapplication-config"
+          content={`${withPrefix('/')}img/favicon/browserconfig.xml`}
         />
+        <meta name="theme-color" content="#ffffff" />
       </Helmet>
       <ThemeProvider theme={theme}>
         <Navbar />

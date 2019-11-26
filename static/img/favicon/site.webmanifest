@@ -1,0 +1,14 @@
+{
+    "name": "Shohola",
+    "short_name": "Shohola",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
