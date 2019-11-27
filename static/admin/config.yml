@@ -60,7 +60,7 @@ collections:
         name: 'templateKey'
         widget: 'hidden'
         default: 'testimonial'
-      - { label: 'Quote', name: 'quote', widget: 'string' }
+      - { label: 'Quote', name: 'quote', widget: 'text' }
       - label: 'Author'
         name: 'author'
         widget: 'object'
