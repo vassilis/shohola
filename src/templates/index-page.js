@@ -21,6 +21,7 @@ import paulsesay from '../img/paulsesay.jpg';
 import roadtrip from '../img/roadtrip.jpg';
 import testimonials from '../img/testimonials.jpg';
 import gallery from '../img/gallery.jpg';
+import People from '../components/People';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -235,8 +236,8 @@ export function IndexPageTemplate(props) {
         </Container>
       </Box>
       <Container fixed>
-        <Box bgcolor="white" borderRadius={5} my={5}>
-          <img src={testimonials} alt="testimonials" />
+        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+          <People />
         </Box>
         <Box bgcolor="white" borderRadius={5} my={5}>
           <iframe
