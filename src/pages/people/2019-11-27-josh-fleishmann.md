@@ -4,7 +4,7 @@ name: Josh Fleishmann
 role: Committee Member
 org:
   - scholarship
-pos: 211
+pos: 212
 additional: true
 ---
 
