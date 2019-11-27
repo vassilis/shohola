@@ -14,9 +14,11 @@ public_folder: /img
 collections:
   - name: 'blog'
     label: 'Stories'
+    label_singular: 'Story'
     folder: 'src/pages/blog'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor: { preview: false }
     fields:
       - {
           label: 'Template Key',
@@ -43,9 +45,11 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list', required: false }
   - name: 'events'
     label: 'Events'
+    label_singular: 'Event'
     folder: 'src/pages/events'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor: { preview: false }
     fields:
       - {
           label: 'Template Key',
@@ -72,9 +76,11 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list', required: false }
   - name: 'testimonials'
     label: 'Testimonials'
+    label_singular: 'Testimonial'
     folder: 'src/pages/testimonials'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor: { preview: false }
     identifier_field: 'quote'
     fields:
       - label: 'Template Key'
@@ -96,9 +102,11 @@ collections:
             }
   - name: 'people'
     label: 'People'
+    label_singular: 'Person'
     folder: 'src/pages/people'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor: { preview: false }
     identifier_field: 'name'
     fields:
       - {
@@ -135,6 +143,8 @@ collections:
         }
   - name: 'pages'
     label: 'Pages'
+    label_singular: 'Page'
+    editor: { preview: false }
     files:
       - file: 'src/pages/index.md'
         label: 'Landing Page'
