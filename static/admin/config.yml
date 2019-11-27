@@ -115,6 +115,7 @@ collections:
         name: 'org'
         widget: 'select'
         default: 'alumni'
+        multiple: true
         options:
           - { label: 'Alumni Association', value: 'alumni' }
           - { label: 'Scholarship Foundation', value: 'scholarship' }
