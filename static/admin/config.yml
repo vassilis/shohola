@@ -55,6 +55,7 @@ collections:
     folder: 'src/pages/testimonials'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    identifier_field: 'quote'
     fields:
       - label: 'Template Key'
         name: 'templateKey'
@@ -73,6 +74,7 @@ collections:
     folder: 'src/pages/people'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    identifier_field: 'name'
     fields:
       - {
           label: 'Template Key',
