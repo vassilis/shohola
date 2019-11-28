@@ -72,7 +72,10 @@ export function IndexPageTemplate(props) {
         </Container>
       </Box>
       <Intro profile={profile} mission={mission} camp={camp} />
-      <Give />
+      <Give
+        onEnterViewport={() => console.log('enter')}
+        onLeaveViewport={() => console.log('leave')}
+      />
       <Gallery />
       <Container fixed>
         <Box bgcolor="white" borderRadius={5} my={5} p={5}>
