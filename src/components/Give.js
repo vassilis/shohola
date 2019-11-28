@@ -29,7 +29,7 @@ function Give(props) {
           {data.title}
         </Typography>
         <br />
-        {data.description}
+        <div dangerouslySetInnerHTML={{ __html: data.description }} />
       </Box>
     </Container>
   );

@@ -42,6 +42,7 @@ export function IndexPageTemplate(props) {
     camp,
     give,
   } = props;
+  // console.log(props);
   const classes = useStyles();
   return (
     <>
@@ -138,7 +139,6 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  const classes = useStyles();
   const { frontmatter } = data.markdownRemark;
 
   return (

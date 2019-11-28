@@ -124,9 +124,9 @@ Intro.defaultProps = {
 };
 
 Intro.propTypes = {
-  profile: PropTypes.string,
-  mission: PropTypes.string,
-  camp: PropTypes.string,
+  profile: PropTypes.object,
+  mission: PropTypes.object,
+  camp: PropTypes.object,
 };
 
 export default Intro;
