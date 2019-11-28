@@ -45,14 +45,14 @@ give:
     positive way that we did at Shohola:
 
 
-    * Network For Good: One time, monthly, quarterly or annual recurring
-    donations Via “Network for Good” – the easiest way to give online.
+    * [Network For Good](https://myshohola.networkforgood.com/): One time,
+    monthly, quarterly or annual recurring donations Via “Network for Good” –
+    the easiest way to give online.
 
-    * Amazon Smile: Did you know that everyone of your purchases on Amazon can
-    benefit the Shohola Scholarship Fund? Here is how:
+    * [Amazon Smile](www.smile.amazon.com): Did you know that everyone of your
+    purchases on Amazon can benefit the Shohola Scholarship Fund? Here is how:
 
-
-    1. Sign on to amazon with: www.smile.amazon.com
+    1. Sign on to amazon with: [www.smile.amazon.com](www.smile.amazon.com)
 
     2. From the ‘Charity List’ search for Camp Shohola Scholarship Fund and
     select us.
@@ -63,8 +63,7 @@ give:
     4. Have a business that uses Amazon - consider utilizing this for your
     business as well!
 
-
-    * Facebook Birthday Fundraisers:  You have likely seen them – Facebook will
+    * Facebook Birthday Fundraisers:  You have likely seen them - Facebook will
     walk you right through it. Last year one alumni was able to raise over $3000
     via the Facebook fundraising program.
   title: Ways to Give
