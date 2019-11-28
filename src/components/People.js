@@ -85,7 +85,7 @@ function People(props) {
         component="h2"
         className={classes.title}
       >
-        Alumni Association
+        <strong>Alumni Association</strong>
       </Typography>
       <PeopleGrid people={alumniPeople} members={alumniMembers} />
       <Box mt={10}>
@@ -95,7 +95,7 @@ function People(props) {
           component="h2"
           className={classes.title}
         >
-          Scholarship Foundation
+          <strong>Scholarship Foundation</strong>
         </Typography>
         <PeopleGrid people={sholarshipPeople} members={sholarshipMembers} />
       </Box>

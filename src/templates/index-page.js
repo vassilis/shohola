@@ -78,41 +78,26 @@ export function IndexPageTemplate(props) {
         <Box bgcolor="white" borderRadius={5} my={5} p={5}>
           <People />
         </Box>
-        <Box bgcolor="white" borderRadius={5} my={5}>
-          <iframe
-            title="Register to our Newsletter"
-            src="https://382c74b4.sibforms.com/serve/MUIEAOUiU7hIuySp5vq2Id2nfH-Pbt_V38X1F2ZxBuMnd3owz25JLJWEslauVYBXIKUAbmHOsz7qPnCnXj6HDN9E-1tbdlTDkeBu9Y-Km-kAxf9Uc1FkMkrmep1skvYHfTHJExG6MD79zD-FxZiSsZfCYc3X0TteK0lFxEL1x1QrnYiwGuTBvIM4gfN1r8fc_pChIgBSkmKw13Yp"
-            width="100%"
-            height="800"
-            frameBorder="0"
-            scrolling="auto"
-            allowFullScreen
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              maxWidth: '100%',
-            }}
-          />
+        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+          <Typography
+            className={classes.title}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
+            <strong>Get Involved</strong>
+          </Typography>
+          <Box mt={5} maxWidth={600} mx="auto">
+            <iframe
+              title="Get Involved"
+              src="https://myshohola.dm.networkforgood.com/forms/31493?iframe=1"
+              width="100%"
+              height="800"
+              frameBorder="0"
+            />
+          </Box>
         </Box>
       </Container>
-      {/* <div className="column is-6">
-          <iframe
-            title="facebook page"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCampShohola%2F&amp;tabs=timeline&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=true&amp;show_facepile=false&amp;appId=179369728884107&amp;width=800&amp;height=800"
-            width="100%"
-            height="800"
-            scrolling="auto"
-            allowFullScreen
-            allowTransparency="true"
-            allow="encrypted-media"
-            style={{
-              display: 'block',
-              width: '100%',
-              height: 800,
-            }}
-          />
-        </div> */}
     </>
   );
 }
