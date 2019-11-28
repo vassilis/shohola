@@ -75,7 +75,12 @@ function Footer() {
                     className={classes.socialIcon}
                   />
                 </a>
-                <a title="instagram" href="https://instagram.com">
+                <a
+                  title="instagram"
+                  href="https://www.instagram.com/camp_shohola/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={instagram}
                     alt="Instagram"
