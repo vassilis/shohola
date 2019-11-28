@@ -1,14 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { withPrefix } from 'gatsby';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import useSiteMetadata from './SiteMetadata';
 import theme from './theme';
 
+const useStyles = makeStyles(() => ({
+  main: {
+    '& .MuiTypography-body2 a': {
+      color: theme.palette.primary.main,
+      '&:hover': {
+        textDecoration: 'none',
+      },
+    },
+  },
+}));
+
 const TemplateWrapper = ({ children }) => {
+  const classes = useStyles();
   const { title, description } = useSiteMetadata();
   return (
     <>
@@ -67,7 +79,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <ThemeProvider theme={theme}>
         <Navbar />
-        <div>{children}</div>
+        <div className={classes.main}>{children}</div>
         <Footer />
       </ThemeProvider>
     </>
