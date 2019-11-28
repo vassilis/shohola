@@ -33,6 +33,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold',
     color: theme.palette.common.white,
   },
+  content: {
+    whiteSpace: 'pre-line',
+  },
 }));
 
 function Intro(props) {
@@ -59,7 +62,11 @@ function Intro(props) {
                 </Typography>
               </CardMedia>
               <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  component="div"
+                  className={classes.content}
+                >
                   {profile.description}
                 </Typography>
               </CardContent>
@@ -82,7 +89,11 @@ function Intro(props) {
                 </Typography>
               </CardMedia>
               <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  component="div"
+                  className={classes.content}
+                >
                   {mission.description}
                 </Typography>
               </CardContent>
@@ -105,7 +116,11 @@ function Intro(props) {
                 </Typography>
               </CardMedia>
               <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography
+                  variant="body2"
+                  component="div"
+                  className={classes.content}
+                >
                   {camp.description}
                 </Typography>
               </CardContent>
