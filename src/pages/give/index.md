@@ -1,7 +1,7 @@
 ---
 templateKey: give
+image: /img/inner-page-comm.jpg
 title: Ways to Give
-image: /img/campslogo.gif
 ---
 
 Here are the ways you can give so that we can continue to support deserving kids who otherwise would not be able to have their lives affected in the positive way that we did at Shohola:
