@@ -13,13 +13,9 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
-// import Features from '../components/Features';
-// import BlogRoll from '../components/BlogRoll';
-// import EventsRoll from '../components/EventsRoll';
 import jumping from '../img/jumping.jpg';
 import paulsesay from '../img/paulsesay.jpg';
 import roadtrip from '../img/roadtrip.jpg';
-import testimonials from '../img/testimonials.jpg';
 import gallery from '../img/gallery.jpg';
 import People from '../components/People';
 
