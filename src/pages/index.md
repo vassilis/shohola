@@ -38,5 +38,11 @@ camp:
     the mountains of northeastern Pennsylvania, and accredited by the American
     Camp Association. Learn more about the camp.
   title: The Camp
+give:
+  description: >-
+    Camp Shohola is a third-generation traditional boys summer camp, located in
+    the mountains of northeastern Pennsylvania, and accredited by the American
+    Camp Association. Learn more about the camp.
+  title: Ways to Give
+  image: /img/directors.jpg
 ---
-

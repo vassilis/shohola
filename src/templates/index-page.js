@@ -13,11 +13,10 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
-import jumping from '../img/jumping.jpg';
-import paulsesay from '../img/paulsesay.jpg';
-import roadtrip from '../img/roadtrip.jpg';
-import gallery from '../img/gallery.jpg';
 import People from '../components/People';
+import Gallery from '../components/Gallery';
+import Intro from '../components/Intro';
+import Give from '../components/Give';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -30,39 +29,19 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     textShadow: '0 0 20px #000, 0 1px 1px #333',
   },
-  boxes: {
-    marginTop: -150,
-    backgroundColor: theme.palette.common.white,
-  },
-  card: {
-    height: '100%',
-  },
-  media: {
-    height: 200,
-    position: 'relative',
-  },
-  title: {
-    position: 'absolute',
-    bottom: 0,
-    left: 16,
-    fontWeight: 'bold',
-    color: theme.palette.common.white,
-  },
-  gallery: {
-    height: 500,
-    backgroundImage: `url(${gallery})`,
-    backgroundSize: 'cover',
-  },
-  galleryTitle: {
-    color: theme.palette.common.white,
-  },
-  galleryLink: {
-    color: theme.palette.common.white,
-  },
 }));
 
 export function IndexPageTemplate(props) {
-  const { image, profileImage, title, heading, profile, mission, camp } = props;
+  const {
+    image,
+    profileImage,
+    title,
+    heading,
+    profile,
+    mission,
+    camp,
+    give,
+  } = props;
   const classes = useStyles();
   return (
     <>
@@ -100,137 +79,9 @@ export function IndexPageTemplate(props) {
           </div>
         </Container>
       </Box>
-      <Container fixed>
-        <Box className={classes.boxes} p={2} borderRadius={5}>
-          <Grid container spacing={2}>
-            <Grid item lg={4}>
-              <Card className={classes.card} elevation={0}>
-                <CardMedia
-                  className={classes.media}
-                  image={jumping}
-                  title={profile.title}
-                >
-                  <Typography
-                    className={classes.title}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {profile.title}
-                  </Typography>
-                </CardMedia>
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {profile.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item lg={4}>
-              <Card className={classes.card} elevation={0}>
-                <CardMedia
-                  className={classes.media}
-                  image={paulsesay}
-                  title={mission.title}
-                >
-                  <Typography
-                    className={classes.title}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {mission.title}
-                  </Typography>
-                </CardMedia>
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {mission.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item lg={4}>
-              <Card className={classes.card} elevation={0}>
-                <CardMedia
-                  className={classes.media}
-                  image={roadtrip}
-                  title={camp.title}
-                >
-                  <Typography
-                    className={classes.title}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {camp.title}
-                  </Typography>
-                </CardMedia>
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {camp.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-      <Box className={classes.gallery} my={5}>
-        <Container fixed>
-          <Box py={5}>
-            <Typography
-              gutterBottom
-              variant="h5"
-              component="h2"
-              className={classes.galleryTitle}
-            >
-              Shohola Photo Archive
-            </Typography>
-            <Box>
-              <a href="#" className={classes.galleryLink}>
-                1950 - 1960
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                1960 - 1970
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                1970 - 1980
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                1980 - 1990
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                1990 - 2000
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                2000 - 2010
-              </a>
-              <br />
-              <a href="#" className={classes.galleryLink}>
-                2010 - 2019
-              </a>
-              <br />
-            </Box>
-          </Box>
-        </Container>
-      </Box>
+      <Intro profile={profile} mission={mission} camp={camp} />
+      <Give data={give} />
+      <Gallery />
       <Container fixed>
         <Box bgcolor="white" borderRadius={5} my={5} p={5}>
           <People />
@@ -283,6 +134,7 @@ IndexPageTemplate.propTypes = {
   profile: PropTypes.object.isRequired,
   mission: PropTypes.object.isRequired,
   camp: PropTypes.object.isRequired,
+  give: PropTypes.object.isRequired,
 };
 
 const IndexPage = ({ data }) => {
@@ -299,9 +151,14 @@ const IndexPage = ({ data }) => {
         profile={frontmatter.profile}
         mission={frontmatter.mission}
         camp={frontmatter.camp}
+        give={frontmatter.give}
       />
     </Layout>
   );
+};
+
+IndexPage.defaultProps = {
+  data: {},
 };
 
 IndexPage.propTypes = {
@@ -345,6 +202,17 @@ export const pageQuery = graphql`
         camp {
           title
           description
+        }
+        give {
+          title
+          description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

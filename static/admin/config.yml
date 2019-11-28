@@ -190,6 +190,17 @@ collections:
                   { label: Description, name: description, widget: markdown },
                 ],
             }
+          - {
+              label: Give,
+              name: give,
+              widget: object,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
       - file: 'src/pages/about/index.md'
         label: 'About'
         name: 'about'
