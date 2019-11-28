@@ -2,8 +2,8 @@
 templateKey: people
 name: Steve Rudenstein
 role: Committee Member
-org: alumni
+org:
+  - alumni
 pos: 104
 additional: true
 ---
-
