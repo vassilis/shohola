@@ -45,7 +45,7 @@ function PeopleGrid(props) {
         <Box mt={5}>
           <strong>Additional Committee Members</strong>
           {members.map(({ node: member }) => (
-            <Box>{member.frontmatter.name}</Box>
+            <Box key={member.id}>{member.frontmatter.name}</Box>
           ))}
         </Box>
       )}
@@ -104,7 +104,7 @@ function People(props) {
 }
 
 People.defaultProps = {
-  data: [],
+  data: {},
 };
 
 People.propTypes = {

@@ -32,16 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export function IndexPageTemplate(props) {
-  const {
-    image,
-    profileImage,
-    title,
-    heading,
-    profile,
-    mission,
-    camp,
-    give,
-  } = props;
+  const { image, profileImage, title, heading, profile, mission, camp } = props;
   // console.log(props);
   const classes = useStyles();
   return (
@@ -81,7 +72,7 @@ export function IndexPageTemplate(props) {
         </Container>
       </Box>
       <Intro profile={profile} mission={mission} camp={camp} />
-      <Give data={give} />
+      <Give />
       <Gallery />
       <Container fixed>
         <Box bgcolor="white" borderRadius={5} my={5} p={5}>
@@ -135,7 +126,6 @@ IndexPageTemplate.propTypes = {
   profile: PropTypes.object.isRequired,
   mission: PropTypes.object.isRequired,
   camp: PropTypes.object.isRequired,
-  give: PropTypes.object.isRequired,
 };
 
 const IndexPage = ({ data }) => {
@@ -151,7 +141,6 @@ const IndexPage = ({ data }) => {
         profile={frontmatter.profile}
         mission={frontmatter.mission}
         camp={frontmatter.camp}
-        give={frontmatter.give}
       />
     </Layout>
   );
@@ -202,17 +191,6 @@ export const pageQuery = graphql`
         camp {
           title
           description
-        }
-        give {
-          title
-          description
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
