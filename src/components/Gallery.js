@@ -16,8 +16,11 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: theme.palette.common.white,
     display: 'inline-block',
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(3),
     fontSize: '1.2rem',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
   img: {
     maxWidth: '100%',
@@ -39,17 +42,17 @@ export default function Gallery() {
           >
             <strong>Shohola Photo Archive</strong>
           </Typography>
-          <Box mt={3} maxWidth={550}>
+          <Box mt={3} maxWidth={550} textAlign="center">
             <Slider />
+            <a
+              href="https://photos.app.goo.gl/qYYsuLJ2Dz3HUnYd9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.link}
+            >
+              <strong>Open Archive</strong>
+            </a>
           </Box>
-          <a
-            href="https://photos.app.goo.gl/qYYsuLJ2Dz3HUnYd9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.link}
-          >
-            <strong>Open Archive</strong>
-          </a>
         </Box>
       </Container>
     </Box>
