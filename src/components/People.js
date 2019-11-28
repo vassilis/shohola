@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
+
+const useStyles = makeStyles(theme => ({}));
 
 function PeopleGrid(props) {
   const { people, members } = props;
@@ -51,6 +54,7 @@ function PeopleGrid(props) {
 }
 
 function People(props) {
+  const classes = useStyles();
   const { data } = props;
   const { edges: people } = data.allMarkdownRemark;
   const alumniPeople = people.filter(
@@ -75,10 +79,24 @@ function People(props) {
   );
   return (
     <>
-      <h2>Alumni Association</h2>
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="h2"
+        className={classes.title}
+      >
+        Alumni Association
+      </Typography>
       <PeopleGrid people={alumniPeople} members={alumniMembers} />
       <Box mt={10}>
-        <h2>Scholarship Foundation</h2>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={classes.title}
+        >
+          Scholarship Foundation
+        </Typography>
         <PeopleGrid people={sholarshipPeople} members={sholarshipMembers} />
       </Box>
     </>
