@@ -159,7 +159,13 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Heading, name: heading, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: 'Profile Image', name: profileImage, widget: image }
+          - { label: 'Notice', name: notice, widget: string, required: false }
+          - {
+              label: 'Show Notice',
+              name: shownotice,
+              widget: boolean,
+              default: false,
+            }
           - {
               label: Mission,
               name: mission,

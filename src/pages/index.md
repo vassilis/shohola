@@ -3,7 +3,8 @@ templateKey: index-page
 title: Shohola Sholarship
 heading: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
-profileImage: /img/directors.jpg
+notice: $5,000 donor dollar-for-dollar match through Jan 31st.
+shownotice: true
 mission:
   description: >-
     The Shohola Scholarship Foundation has a dual mission. We seek to aid boys
@@ -42,4 +43,3 @@ camp:
   title: The Camp
   image: /img/roadtrip.jpg
 ---
-

@@ -31,10 +31,25 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontWeight: 900,
   },
+  noticeBox: {
+    color: theme.palette.secondary.main,
+    backgroundColor: `rgba(0, 0, 0, .5)`,
+    borderRadius: 5,
+    // textShadow: `0 0 2px ${theme.palette.text.primary}`,
+  },
 }));
 
 export function IndexPageTemplate(props) {
-  const { image, profileImage, title, heading, profile, mission, camp } = props;
+  const {
+    image,
+    notice,
+    shownotice,
+    title,
+    heading,
+    profile,
+    mission,
+    camp,
+  } = props;
   // console.log(props);
   const classes = useStyles();
   return (
@@ -71,6 +86,13 @@ export function IndexPageTemplate(props) {
             >
               Donate Now
             </Button>
+            {shownotice && notice && (
+              <Box mt={4} px={1} className={classes.noticeBox}>
+                <Typography className={classes.title} variant="subtitle1">
+                  {notice}
+                </Typography>
+              </Box>
+            )}
           </Box>
         </Container>
       </Box>
@@ -105,10 +127,15 @@ export function IndexPageTemplate(props) {
   );
 }
 
+IndexPageTemplate.defaultProps = {
+  notice: null,
+  shownotice: false,
+};
+
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-  profileImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-    .isRequired,
+  notice: PropTypes.string,
+  shownotice: PropTypes.bool,
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   profile: PropTypes.object.isRequired,
@@ -160,13 +187,8 @@ export const pageQuery = graphql`
             }
           }
         }
-        profileImage {
-          childImageSharp {
-            fluid(maxWidth: 800, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        notice
+        shownotice
         heading
         profile {
           title
