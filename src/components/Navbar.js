@@ -14,10 +14,8 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     color: theme.palette.common.white,
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+    margin: '0 12px',
     textDecoration: 'none',
-    fontWeight: 700,
     fontSize: '1.1rem',
     '&:hover': {
       color: theme.palette.secondary.main,
