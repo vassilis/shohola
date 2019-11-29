@@ -49,14 +49,13 @@ export function IndexPageTemplate(props) {
         }}
       >
         <Container fixed>
-          <div
-            style={{
-              display: 'flex',
-              lineHeight: '1',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-              flexDirection: 'column',
-            }}
+          <Box
+            display="flex"
+            lineHeight="1"
+            justifyContent="space-around"
+            alignItems="center"
+            flexDirection="column"
+            marginTop="-150px"
           >
             <h1 className={classes.heading}>{heading}</h1>
             <Button
@@ -68,14 +67,11 @@ export function IndexPageTemplate(props) {
             >
               Donate Now
             </Button>
-          </div>
+          </Box>
         </Container>
       </Box>
       <Intro profile={profile} mission={mission} camp={camp} />
-      <Give
-        onEnterViewport={() => console.log('enter')}
-        onLeaveViewport={() => console.log('leave')}
-      />
+      <Give />
       <Gallery />
       <Container fixed>
         <Box bgcolor="white" borderRadius={5} my={5} p={5}>
