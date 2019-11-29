@@ -1,21 +1,21 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Box } from '@material-ui/core';
+import { Container, Grid, Box, Link } from '@material-ui/core';
+import grey from '@material-ui/core/colors/grey';
+import EmailIcon from '@material-ui/icons/Email';
 import logo from '../img/logo.png';
-import facebook from '../img/social/facebook.svg';
-import instagram from '../img/social/instagram.svg';
-import twitter from '../img/social/twitter.svg';
-import vimeo from '../img/social/vimeo.svg';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: grey[900],
   },
   link: {
-    color: theme.palette.common.white,
+    display: 'inline-flex',
+    alignItems: 'center',
+    color: theme.palette.secondary.main,
     textDecoration: 'none',
     '&:hover': {
+      color: theme.palette.common.white,
       textDecoration: 'underline',
     },
   },
@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.common.white,
     padding: theme.spacing(1),
     borderRadius: 5,
+  },
+  emailIcon: {
+    marginRight: 5,
   },
 }));
 
@@ -44,7 +47,7 @@ function Footer() {
                   <strong>Social Network</strong>
                 </Box>
                 <Link
-                  to="https://www.instagram.com/camp_shohola/"
+                  href="https://www.instagram.com/camp_shohola/"
                   className={classes.link}
                   target="_blank"
                 >
@@ -53,7 +56,7 @@ function Footer() {
                 <br />
                 <Link
                   className={classes.link}
-                  to="https://www.facebook.com/CampShohola/"
+                  href="https://www.facebook.com/CampShohola/"
                   target="_blank"
                 >
                   Camp Shohola Facebook Page
@@ -61,7 +64,7 @@ function Footer() {
                 <br />
                 <Link
                   className={classes.link}
-                  to="https://www.facebook.com/groups/691446744261809/"
+                  href="https://www.facebook.com/groups/691446744261809/"
                   target="_blank"
                 >
                   Camp Shohola Alumni Facebook Group
@@ -69,7 +72,7 @@ function Footer() {
                 <br />
                 <Link
                   className={classes.link}
-                  to="https://www.linkedin.com/groups/8861885/"
+                  href="https://www.linkedin.com/groups/8861885/"
                   target="_blank"
                 >
                   Camp Shohola Professional Network
@@ -78,9 +81,10 @@ function Footer() {
                 <br />
                 <Link
                   className={classes.link}
-                  to="mailto:ShoholaAlumni@gmail.com"
+                  href="mailto:ShoholaAlumni@gmail.com"
                   target="_blank"
                 >
+                  <EmailIcon className={classes.emailIcon} />
                   Contact via Email
                 </Link>
                 <Box color="white" mt={5}>

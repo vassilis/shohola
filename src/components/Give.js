@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     bottom: 0,
     left: 16,
-    fontWeight: 'bold',
+    fontWeight: 900,
     color: theme.palette.common.white,
   },
   count: {
@@ -93,7 +93,7 @@ function Give() {
       partialVisibility
       onChange={isVisible => startCounters(isVisible)}
     >
-      <Container>
+      <Container id="ways-to-give">
         <Box bgcolor="white" borderRadius={5} my={5} p={2}>
           <Card className={classes.card} elevation={0}>
             <CardMedia
@@ -107,7 +107,7 @@ function Give() {
                     <Box textAlign="center" color="white">
                       <Box
                         fontSize="4rem"
-                        fontWeight="bold"
+                        fontWeight={900}
                         className={classes.count}
                       >
                         {countUp1}
@@ -119,7 +119,7 @@ function Give() {
                     <Box textAlign="center" color="white">
                       <Box
                         fontSize="4rem"
-                        fontWeight="bold"
+                        fontWeight={900}
                         className={classes.count}
                       >
                         {countUp2}
@@ -131,7 +131,7 @@ function Give() {
                     <Box textAlign="center" color="white">
                       <Box
                         fontSize="4rem"
-                        fontWeight="bold"
+                        fontWeight={900}
                         className={classes.count}
                       >
                         {countUp3}

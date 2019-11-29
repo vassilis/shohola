@@ -1,16 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import {
-  Grid,
-  Button,
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Container,
-  Typography,
-} from '@material-ui/core';
+import { Button, Box, Container, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import People from '../components/People';
@@ -27,7 +18,15 @@ const useStyles = makeStyles(theme => ({
   heading: {
     fontSize: '4rem',
     color: 'white',
-    textShadow: '0 0 20px #000, 0 1px 1px #333',
+    // textShadow: '0 0 20px #000, 0 1px 1px #333',
+    fontWeight: 900,
+  },
+  btnDonate: {
+    fontWeight: 900,
+    fontSize: '1.2rem',
+  },
+  title: {
+    fontWeight: 900,
   },
 }));
 
@@ -62,8 +61,9 @@ export function IndexPageTemplate(props) {
               component={Link}
               to="/donate"
               variant="contained"
-              color="primary"
+              color="secondary"
               size="large"
+              className={classes.btnDonate}
             >
               Donate Now
             </Button>
@@ -74,17 +74,17 @@ export function IndexPageTemplate(props) {
       <Give />
       <Gallery />
       <Container fixed>
-        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+        <Box id="people">
           <People />
         </Box>
-        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+        <Box id="get-involved" bgcolor="white" borderRadius={5} my={5} p={5}>
           <Typography
             className={classes.title}
             gutterBottom
             variant="h5"
             component="h2"
           >
-            <strong>Get Involved</strong>
+            Get Involved
           </Typography>
           <Box mt={5} maxWidth={600} mx="auto">
             <iframe

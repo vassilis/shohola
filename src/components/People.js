@@ -5,7 +5,12 @@ import { Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles(theme => ({
+  title: {
+    marginBottom: theme.spacing(4),
+    fontWeight: 900,
+  },
+}));
 
 function PeopleGrid(props) {
   const { people, members } = props;
@@ -79,26 +84,32 @@ function People(props) {
   );
   return (
     <>
-      <Typography
-        gutterBottom
-        variant="h5"
-        component="h2"
-        className={classes.title}
-      >
-        <strong>Alumni Association</strong>
-      </Typography>
-      <PeopleGrid people={alumniPeople} members={alumniMembers} />
-      <Box mt={10}>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="h2"
-          className={classes.title}
-        >
-          <strong>Scholarship Foundation</strong>
-        </Typography>
-        <PeopleGrid people={sholarshipPeople} members={sholarshipMembers} />
-      </Box>
+      {(alumniPeople || alumniMembers) && (
+        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.title}
+          >
+            <strong>Alumni Association</strong>
+          </Typography>
+          <PeopleGrid people={alumniPeople} members={alumniMembers} />
+        </Box>
+      )}
+      {(sholarshipPeople || sholarshipMembers) && (
+        <Box mt={10} bgcolor="white" borderRadius={5} my={5} p={5}>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            className={classes.title}
+          >
+            <strong>Scholarship Foundation</strong>
+          </Typography>
+          <PeopleGrid people={sholarshipPeople} members={sholarshipMembers} />
+        </Box>
+      )}
     </>
   );
 }

@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     bottom: 0,
     left: 16,
-    fontWeight: 'bold',
+    fontWeight: 900,
     color: theme.palette.common.white,
   },
   content: {

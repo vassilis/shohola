@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 // import { url } from 'inspector';
-import { AppBar, Toolbar, Button, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Box, Link } from '@material-ui/core';
 import logo from '../img/header.png';
 import bg from '../img/header-bg.png';
 
@@ -17,6 +16,13 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.white,
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
+    textDecoration: 'none',
+    fontWeight: 700,
+    fontSize: '1.1rem',
+    '&:hover': {
+      color: theme.palette.secondary.main,
+      textDecoration: 'none',
+    },
   },
 }));
 
@@ -56,18 +62,21 @@ function Navbar() {
           </div>
         </div>
         <Box className={`${classes.menu} ${state.navBarActiveClass}`}>
-          <Button component={Link} className={classes.link} to="#">
-            About
-          </Button>
-          <Button component={Link} className={classes.link} to="#">
-            Stories
-          </Button>
-          <Button component={Link} className={classes.link} to="#">
-            Events
-          </Button>
-          <Button component={Link} className={classes.link} to="#">
+          <Link className={classes.link} href="#ways-to-give">
+            Ways to Give
+          </Link>
+          <Link className={classes.link} href="#photos">
+            Photos
+          </Link>
+          <Link className={classes.link} href="#people">
+            People
+          </Link>
+          <Link className={classes.link} href="#get-involved">
+            Get Involved
+          </Link>
+          <Link className={classes.link} href="mailto:ShoholaAlumni@gmail.com">
             Contact
-          </Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

@@ -35,7 +35,7 @@ const TemplateWrapper = ({ children }) => {
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;display=swap"
         />
         <link
           rel="apple-touch-icon"
