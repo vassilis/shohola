@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import { Button, Box, Container, Typography } from '@material-ui/core';
+import { graphql } from 'gatsby';
+import { Button, Box, Container, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 import People from '../components/People';
@@ -24,6 +24,9 @@ const useStyles = makeStyles(theme => ({
   btnDonate: {
     fontWeight: 900,
     fontSize: '1.2rem',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
   title: {
     fontWeight: 900,
@@ -59,11 +62,12 @@ export function IndexPageTemplate(props) {
             <h1 className={classes.heading}>{heading}</h1>
             <Button
               component={Link}
-              to="/donate"
+              href="https://myshohola.networkforgood.com/"
               variant="contained"
               color="secondary"
               size="large"
               className={classes.btnDonate}
+              target="_blank"
             >
               Donate Now
             </Button>
