@@ -167,14 +167,35 @@ export const pageQuery = graphql`
         profile {
           title
           description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         mission {
           title
           description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         camp {
           title
           description
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

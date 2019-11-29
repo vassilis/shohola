@@ -166,6 +166,7 @@ collections:
               widget: object,
               fields:
                 [
+                  { label: Image, name: image, widget: image },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: markdown },
                 ],
@@ -176,6 +177,7 @@ collections:
               widget: object,
               fields:
                 [
+                  { label: Image, name: image, widget: image },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: markdown },
                 ],
@@ -186,6 +188,7 @@ collections:
               widget: object,
               fields:
                 [
+                  { label: Image, name: image, widget: image },
                   { label: Title, name: title, widget: string },
                   { label: Description, name: description, widget: markdown },
                 ],

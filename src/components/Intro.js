@@ -49,7 +49,7 @@ function Intro(props) {
             <Card className={classes.card} elevation={0}>
               <CardMedia
                 className={classes.media}
-                image={jumping}
+                image={profile.image.childImageSharp.fluid.src}
                 title={profile.title}
               >
                 <Typography
@@ -76,7 +76,7 @@ function Intro(props) {
             <Card className={classes.card} elevation={0}>
               <CardMedia
                 className={classes.media}
-                image={paulsesay}
+                image={mission.image.childImageSharp.fluid.src}
                 title={mission.title}
               >
                 <Typography
@@ -103,7 +103,7 @@ function Intro(props) {
             <Card className={classes.card} elevation={0}>
               <CardMedia
                 className={classes.media}
-                image={roadtrip}
+                image={camp.image.childImageSharp.fluid.src}
                 title={camp.title}
               >
                 <Typography

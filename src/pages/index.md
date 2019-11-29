@@ -5,6 +5,7 @@ heading: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
 profileImage: /img/directors.jpg
 mission:
+  image: /img/directors.jpg
   description: >-
     The Shohola Scholarship Foundation has a dual mission. We seek to aid boys
     in making camp a reality each year while building a larger fund whose
@@ -19,6 +20,7 @@ mission:
     With your help, we will make the stuff of dreams a reality.
   title: Our Mission
 profile:
+  image: /img/directors.jpg
   description: >-
     The Shohola Scholarship Foundation is a not-for-profit, 501(c)(3),
     corporation. The money raised through your charity goes directly to support
@@ -33,6 +35,7 @@ profile:
     with those that may not otherwise be able to attend.
   title: Profile
 camp:
+  image: /img/directors.jpg
   description: >-
     Camp Shohola is a third-generation traditional boys summer camp, located in
     the mountains of northeastern Pennsylvania, and accredited by the American
@@ -69,4 +72,3 @@ give:
   title: Ways to Give
   image: /img/inner-page-comm.jpg
 ---
-
