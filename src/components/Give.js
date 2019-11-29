@@ -21,11 +21,8 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   title: {
-    position: 'absolute',
-    bottom: 0,
-    left: 16,
     fontWeight: 900,
-    color: theme.palette.common.white,
+    marginTop: theme.spacing(1),
   },
   count: {
     position: 'relative',
@@ -142,6 +139,8 @@ function Give() {
                   </Grid>
                 </Grid>
               </Box>
+            </CardMedia>
+            <CardContent>
               <Typography
                 className={classes.title}
                 gutterBottom
@@ -150,8 +149,6 @@ function Give() {
               >
                 {page.frontmatter.title}
               </Typography>
-            </CardMedia>
-            <CardContent>
               <Typography variant="body2" component="div">
                 <HTMLContent content={page.html} />
               </Typography>
