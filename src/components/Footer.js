@@ -10,9 +10,14 @@ import vimeo from '../img/social/vimeo.svg';
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
     backgroundColor: theme.palette.secondary.main,
+  },
+  link: {
+    color: theme.palette.common.white,
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
   },
   textWhite: {
     color: theme.palette.common.white,
@@ -31,72 +36,65 @@ function Footer() {
   return (
     <footer className={classes.footer}>
       <Container>
-        <div className="container has-text-white">
+        <Box px={5} py={10}>
           <Grid container spacing={5}>
-            <Grid item lg={8}>
+            <Grid item lg={10}>
               <section className="">
-                <Link to="/" className={classes.textWhite}>
-                  Home
+                <Box color="white" mb={2}>
+                  <strong>Social Network</strong>
+                </Box>
+                <Link
+                  to="https://www.instagram.com/camp_shohola/"
+                  className={classes.link}
+                  target="_blank"
+                >
+                  Camp Shohola on Instagram
                 </Link>
                 <br />
-                <Link className={classes.textWhite} to="#">
-                  About
+                <Link
+                  className={classes.link}
+                  to="https://www.facebook.com/CampShohola/"
+                  target="_blank"
+                >
+                  Camp Shohola Facebook Page
                 </Link>
                 <br />
-                <Link className={classes.textWhite} to="#">
-                  Events
+                <Link
+                  className={classes.link}
+                  to="https://www.facebook.com/groups/691446744261809/"
+                  target="_blank"
+                >
+                  Camp Shohola Alumni Facebook Group
                 </Link>
                 <br />
-                <Link className={classes.textWhite} to="#">
-                  Stories
+                <Link
+                  className={classes.link}
+                  to="https://www.linkedin.com/groups/8861885/"
+                  target="_blank"
+                >
+                  Camp Shohola Professional Network
                 </Link>
                 <br />
-                <Link className={classes.textWhite} to="#">
-                  Contact
+                <br />
+                <Link
+                  className={classes.link}
+                  to="mailto:ShoholaAlumni@gmail.com"
+                  target="_blank"
+                >
+                  Contact via Email
                 </Link>
+                <Box color="white" mt={5}>
+                  © 2019 Shohola Scholarship // All Rights Reserved.
+                </Box>
               </section>
             </Grid>
-            <Grid item lg={4}>
-              <Box textAlign="center" mb={5}>
-                <img src={logo} alt="Shohola" style={{ maxHeight: 150 }} />
-              </Box>
-              <Box textAlign="center">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    className={classes.socialIcon}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    src={twitter}
-                    alt="Twitter"
-                    className={classes.socialIcon}
-                  />
-                </a>
-                <a
-                  title="instagram"
-                  href="https://www.instagram.com/camp_shohola/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    className={classes.socialIcon}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img src={vimeo} alt="Vimeo" className={classes.socialIcon} />
-                </a>
+            <Grid item lg={2}>
+              <Box textAlign="right">
+                <img src={logo} alt="Shohola" style={{ maxHeight: 180 }} />
               </Box>
             </Grid>
           </Grid>
-          <Box color="white">
-            © 2019 Shohola Scholarship // All Rights Reserved.
-          </Box>
-        </div>
+        </Box>
       </Container>
     </footer>
   );
