@@ -11,9 +11,11 @@ import Give from '../components/Give';
 
 const useStyles = makeStyles(theme => ({
   header: {
+    position: 'relative',
     height: 800,
     backgroundSize: 'cover',
     backgroundPosition: '50%',
+    zIndex: -1,
   },
   heading: {
     fontSize: '4rem',
@@ -32,9 +34,13 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900,
   },
   noticeBox: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
     color: theme.palette.secondary.main,
     backgroundColor: `rgba(0, 0, 0, .5)`,
-    borderRadius: 5,
+    textAlign: 'center',
   },
 }));
 
@@ -86,8 +92,8 @@ export function IndexPageTemplate(props) {
               Donate Now
             </Button>
             {shownotice && notice && (
-              <Box mt={4} px={1} className={classes.noticeBox}>
-                <Typography className={classes.title} variant="subtitle1">
+              <Box p={1} className={classes.noticeBox}>
+                <Typography className={classes.title} variant="h5">
                   {notice}
                 </Typography>
               </Box>
