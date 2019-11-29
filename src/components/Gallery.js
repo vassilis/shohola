@@ -18,6 +18,10 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-block',
     marginTop: theme.spacing(3),
     fontWeight: 900,
+    color: theme.palette.text.primary,
+    '&:hover': {
+      color: theme.palette.text.primary,
+    },
   },
   img: {
     maxWidth: '100%',

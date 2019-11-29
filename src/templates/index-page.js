@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     height: 800,
     backgroundSize: 'cover',
     backgroundPosition: '50%',
-    zIndex: -1,
+    zIndex: 0,
   },
   heading: {
     fontSize: '4rem',
@@ -24,9 +24,11 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900,
   },
   btnDonate: {
+    color: theme.palette.text.primary,
     fontWeight: 900,
     fontSize: '1.2rem',
     '&:hover': {
+      color: theme.palette.text.primary,
       textDecoration: 'none',
     },
   },

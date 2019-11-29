@@ -8,6 +8,7 @@ import bg from '../img/header-bg.png';
 const useStyles = makeStyles(theme => ({
   navbar: {
     backgroundImage: `url(${bg})`,
+    zIndex: 1000,
   },
   menu: {
     marginLeft: 'auto',
@@ -39,7 +40,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" className={classes.navbar}>
+    <AppBar position="relative" className={classes.navbar}>
       <Toolbar>
         <div className="navbar-brand">
           <Link to="/" title="Shohola Scholarship" style={{ display: 'flex' }}>
