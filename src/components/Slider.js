@@ -16,10 +16,23 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function GallerySlider() {
   const classes = useStyles();
   return (
-    <Slider dots infinite speed={500} slidesToShow={1} slidesToScroll={1}>
+    <Slider
+      dots
+      infinite
+      speed={500}
+      slidesToShow={1}
+      slidesToScroll={1}
+      autoplay
+      autoplaySpeed={3000}
+      initialSlide={getRandomInt(5)}
+    >
       <div>
         <img src={img1} alt="" className={classes.img} />
       </div>
