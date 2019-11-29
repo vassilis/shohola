@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.main,
     backgroundColor: `rgba(0, 0, 0, .5)`,
     borderRadius: 5,
-    // textShadow: `0 0 2px ${theme.palette.text.primary}`,
   },
 }));
 
@@ -150,7 +149,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        profileImage={frontmatter.profileImage}
+        notice={frontmatter.notice}
+        shownotice={frontmatter.shownotice}
         title={frontmatter.title}
         heading={frontmatter.heading}
         profile={frontmatter.profile}
