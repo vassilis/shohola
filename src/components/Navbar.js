@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // import { url } from 'inspector';
-import { AppBar, Toolbar, Box, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Box } from '@material-ui/core';
+import { Link } from 'gatsby';
 import logo from '../img/header.png';
 import bg from '../img/header-bg.png';
 
@@ -61,21 +62,26 @@ function Navbar() {
           </div>
         </div>
         <Box className={`${classes.menu} ${state.navBarActiveClass}`}>
-          <Link className={classes.link} href="#ways-to-give">
+          <Link className={classes.link} to="#ways-to-give">
             Ways to Give
           </Link>
-          <Link className={classes.link} href="#photos">
+          <Link className={classes.link} to="#photos">
             Photos
           </Link>
-          <Link className={classes.link} href="#people">
+          <Link className={classes.link} to="#people">
             People
           </Link>
-          <Link className={classes.link} href="#get-involved">
+          <Link className={classes.link} to="#get-involved">
             Get Involved
           </Link>
-          <Link className={classes.link} href="mailto:ShoholaAlumni@gmail.com">
+          <a
+            className={classes.link}
+            href="mailto:ShoholaAlumni@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Contact
-          </Link>
+          </a>
         </Box>
       </Toolbar>
     </AppBar>

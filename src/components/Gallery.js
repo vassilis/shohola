@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
   btn: {
     display: 'inline-block',
     marginTop: theme.spacing(3),
-    fontWeight: 900,
     color: theme.palette.text.primary,
     '&:hover': {
       color: theme.palette.text.primary,
@@ -34,7 +33,7 @@ export default function Gallery() {
   return (
     <Box id="photos" className={classes.gallery} my={5}>
       <Container fixed>
-        <Box p={5}>
+        <Box p={4}>
           <Typography
             className={classes.title}
             gutterBottom

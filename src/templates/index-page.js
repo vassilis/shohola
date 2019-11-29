@@ -8,6 +8,7 @@ import People from '../components/People';
 import Gallery from '../components/Gallery';
 import Intro from '../components/Intro';
 import Give from '../components/Give';
+import BlogRoll from '../components/BlogRoll';
 
 const useStyles = makeStyles(theme => ({
   header: {
@@ -107,10 +108,11 @@ export function IndexPageTemplate(props) {
       <Give />
       <Gallery />
       <Container fixed>
+        <BlogRoll />
         <Box id="people">
           <People />
         </Box>
-        <Box id="get-involved" bgcolor="white" borderRadius={5} my={5} p={5}>
+        <Box id="get-involved" bgcolor="white" borderRadius={5} my={5} p={4}>
           <Typography
             className={classes.title}
             gutterBottom

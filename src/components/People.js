@@ -85,7 +85,7 @@ function People(props) {
   return (
     <>
       {(alumniPeople || alumniMembers) && (
-        <Box bgcolor="white" borderRadius={5} my={5} p={5}>
+        <Box bgcolor="white" borderRadius={5} my={5} p={4}>
           <Typography
             gutterBottom
             variant="h5"
@@ -98,7 +98,7 @@ function People(props) {
         </Box>
       )}
       {(sholarshipPeople || sholarshipMembers) && (
-        <Box mt={10} bgcolor="white" borderRadius={5} my={5} p={5}>
+        <Box mt={10} bgcolor="white" borderRadius={5} my={5} p={4}>
           <Typography
             gutterBottom
             variant="h5"

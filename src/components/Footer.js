@@ -39,7 +39,7 @@ function Footer() {
   return (
     <footer className={classes.footer}>
       <Container>
-        <Box px={5} py={10}>
+        <Box px={4} py={10}>
           <Grid container spacing={5}>
             <Grid item lg={10}>
               <section className="">
@@ -50,6 +50,7 @@ function Footer() {
                   href="https://www.instagram.com/camp_shohola/"
                   className={classes.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Camp Shohola on Instagram
                 </Link>
@@ -58,6 +59,7 @@ function Footer() {
                   className={classes.link}
                   href="https://www.facebook.com/CampShohola/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Camp Shohola Facebook Page
                 </Link>
@@ -66,6 +68,7 @@ function Footer() {
                   className={classes.link}
                   href="https://www.facebook.com/groups/691446744261809/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Camp Shohola Alumni Facebook Group
                 </Link>
@@ -74,6 +77,7 @@ function Footer() {
                   className={classes.link}
                   href="https://www.linkedin.com/groups/8861885/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Camp Shohola Professional Network
                 </Link>
@@ -83,6 +87,7 @@ function Footer() {
                   className={classes.link}
                   href="mailto:ShoholaAlumni@gmail.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <EmailIcon className={classes.emailIcon} />
                   Contact via Email

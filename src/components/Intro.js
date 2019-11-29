@@ -16,6 +16,8 @@ import roadtrip from '../img/roadtrip.jpg';
 
 const useStyles = makeStyles(theme => ({
   boxes: {
+    position: 'relative',
+    zIndex: 1,
     marginTop: -150,
     backgroundColor: theme.palette.common.white,
   },
