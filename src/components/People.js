@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 function PeopleGrid(props) {
   const { people, members } = props;
   return (
-    <Box id="people">
+    <>
       {people && (
         <Grid container spacing={5}>
           {people.map(({ node: person }) => (
@@ -54,7 +54,7 @@ function PeopleGrid(props) {
           ))}
         </Box>
       )}
-    </Box>
+    </>
   );
 }
 
@@ -85,7 +85,7 @@ function People(props) {
   return (
     <>
       {(alumniPeople || alumniMembers) && (
-        <Box bgcolor="white" borderRadius={5} my={5} p={4}>
+        <Box id="people-alumni" bgcolor="white" borderRadius={5} my={5} p={4}>
           <Typography
             gutterBottom
             variant="h5"
@@ -98,7 +98,14 @@ function People(props) {
         </Box>
       )}
       {(sholarshipPeople || sholarshipMembers) && (
-        <Box mt={10} bgcolor="white" borderRadius={5} my={5} p={4}>
+        <Box
+          id="people-scholarship"
+          mt={10}
+          bgcolor="white"
+          borderRadius={5}
+          my={5}
+          p={4}
+        >
           <Typography
             gutterBottom
             variant="h5"

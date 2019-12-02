@@ -1,8 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, Box, Link } from '@material-ui/core';
+import { Container, Grid, Box, Link as SimpleLink } from '@material-ui/core';
 import grey from '@material-ui/core/colors/grey';
 import EmailIcon from '@material-ui/icons/Email';
+import { Link } from 'gatsby';
 import logo from '../img/logo.png';
 
 const useStyles = makeStyles(theme => ({
@@ -41,60 +42,81 @@ function Footer() {
       <Container>
         <Box px={4} py={10}>
           <Grid container spacing={5}>
-            <Grid item lg={10}>
+            <Grid item lg={5}>
+              <Link className={classes.link} to="#ways-to-give">
+                Ways to Give
+              </Link>
+              <br />
+              <Link className={classes.link} to="#photos">
+                Shohola Photo Archive
+              </Link>
+              <br />
+              <Link className={classes.link} to="#people-alumni">
+                Alumni Association People
+              </Link>
+              <br />
+              <Link className={classes.link} to="#people-scholarship">
+                Scholarship Foundation People
+              </Link>
+              <br />
+              <Link className={classes.link} to="#get-involved">
+                Get Involved / Newsletter
+              </Link>
+              <br />
+              <br />
+              <SimpleLink
+                className={classes.link}
+                href="mailto:ShoholaAlumni@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <EmailIcon className={classes.emailIcon} />
+                Contact via Email
+              </SimpleLink>
+              <Box color="white" mt={5}>
+                © 2019 Shohola Scholarship // All Rights Reserved.
+              </Box>
+            </Grid>
+            <Grid item lg={5}>
               <section className="">
                 <Box color="white" mb={2}>
                   <strong>Social Network</strong>
                 </Box>
-                <Link
+                <SimpleLink
                   href="https://www.instagram.com/camp_shohola/"
                   className={classes.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Camp Shohola on Instagram
-                </Link>
+                </SimpleLink>
                 <br />
-                <Link
+                <SimpleLink
                   className={classes.link}
                   href="https://www.facebook.com/CampShohola/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Camp Shohola Facebook Page
-                </Link>
+                </SimpleLink>
                 <br />
-                <Link
+                <SimpleLink
                   className={classes.link}
                   href="https://www.facebook.com/groups/691446744261809/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Camp Shohola Alumni Facebook Group
-                </Link>
+                </SimpleLink>
                 <br />
-                <Link
+                <SimpleLink
                   className={classes.link}
                   href="https://www.linkedin.com/groups/8861885/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Camp Shohola Professional Network
-                </Link>
-                <br />
-                <br />
-                <Link
-                  className={classes.link}
-                  href="mailto:ShoholaAlumni@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <EmailIcon className={classes.emailIcon} />
-                  Contact via Email
-                </Link>
-                <Box color="white" mt={5}>
-                  © 2019 Shohola Scholarship // All Rights Reserved.
-                </Box>
+                </SimpleLink>
               </section>
             </Grid>
             <Grid item lg={2}>

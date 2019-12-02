@@ -68,7 +68,7 @@ function Navbar() {
           <Link className={classes.link} to="#photos">
             Photos
           </Link>
-          <Link className={classes.link} to="#people">
+          <Link className={classes.link} to="#people-alumni">
             People
           </Link>
           <Link className={classes.link} to="#get-involved">

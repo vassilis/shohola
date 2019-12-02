@@ -12,6 +12,7 @@ import BlogRoll from '../components/BlogRoll';
 import HeaderTop from '../components/HeaderTop';
 import HeaderBottom from '../components/HeaderBottom';
 import Newsletter from '../components/Newsletter';
+import Social from '../components/Social';
 
 export function IndexPageTemplate(props) {
   const {
@@ -37,6 +38,7 @@ export function IndexPageTemplate(props) {
       />
       <Intro profile={profile} mission={mission} camp={camp} />
       <Give />
+      <Social />
       <Gallery />
       <Container fixed>
         <BlogRoll />
