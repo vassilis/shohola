@@ -3,7 +3,7 @@ templateKey: index-page
 title: Shohola Sholarship
 heading: Give a boy the chance to experience Camp Shohola
 image: /img/inner-page-landsports.jpg
-notice: $5,000 donor dollar-for-dollar match through Jan 31st.
+notice: '$5,000 donor dollar-for-dollar match through Jan 31st.'
 shownotice: true
 mission:
   description: >-
@@ -42,6 +42,9 @@ camp:
     Camp Association. Learn more about the camp.
   title: The Camp
   image: /img/roadtrip.jpg
-footerImage: /img/surf.jpg
-footerTitle: Recurring donations are easy on the budget and vital for the scholarship foundation
+footerImage: /img/cropped-boys-summer-camp-in-pennsylvania.jpg
+footerTitle: >-
+  Recurring donations are easy on the budget and vital for the scholarship
+  foundation
 ---
+
