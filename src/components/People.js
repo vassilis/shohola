@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
 function PeopleGrid(props) {
   const { people, members } = props;
   return (
-    <>
+    <Box id="people">
       {people && (
         <Grid container spacing={5}>
           {people.map(({ node: person }) => (
@@ -54,7 +54,7 @@ function PeopleGrid(props) {
           ))}
         </Box>
       )}
-    </>
+    </Box>
   );
 }
 
