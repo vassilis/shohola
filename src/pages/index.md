@@ -42,4 +42,6 @@ camp:
     Camp Association. Learn more about the camp.
   title: The Camp
   image: /img/roadtrip.jpg
+footerImage: /img/surf.jpg
+footerTitle: Recurring donations are easy on the budget and vital for the scholarship foundation
 ---

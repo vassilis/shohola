@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
   heading: {
     fontSize: '4rem',
     color: 'white',
-    // textShadow: '0 0 20px #000, 0 1px 1px #333',
     fontWeight: 900,
   },
   btnDonate: {
@@ -45,6 +44,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: `rgba(0, 0, 0, .5)`,
     textAlign: 'center',
   },
+  footerTitle: {
+    fontSize: '3rem',
+    color: 'white',
+    fontWeight: 900,
+    lineHeight: 1.5,
+  },
 }));
 
 export function IndexPageTemplate(props) {
@@ -57,6 +62,8 @@ export function IndexPageTemplate(props) {
     profile,
     mission,
     camp,
+    footerImage,
+    footerTitle,
   } = props;
   // console.log(props);
   const classes = useStyles();
@@ -119,7 +126,7 @@ export function IndexPageTemplate(props) {
             variant="h5"
             component="h2"
           >
-            Get Involved
+            Subscribe to the Newsletter and Get Involved
           </Typography>
           <Box mt={5} maxWidth={600} mx="auto">
             <iframe
@@ -132,6 +139,42 @@ export function IndexPageTemplate(props) {
           </Box>
         </Box>
       </Container>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        className={classes.header}
+        style={{
+          backgroundImage: `url(${
+            footerImage.childImageSharp
+              ? footerImage.childImageSharp.fluid.src
+              : footerImage
+          })`,
+        }}
+      >
+        <Container fixed>
+          <Box
+            display="flex"
+            lineHeight="1"
+            justifyContent="space-around"
+            alignItems="center"
+            flexDirection="column"
+          >
+            <h2 className={classes.footerTitle}>{footerTitle}</h2>
+            <Button
+              component={Link}
+              href="https://myshohola.networkforgood.com/"
+              variant="contained"
+              color="secondary"
+              size="large"
+              className={classes.btnDonate}
+              target="_blank"
+            >
+              Donate Now
+            </Button>
+          </Box>
+        </Container>
+      </Box>
     </>
   );
 }
@@ -150,6 +193,9 @@ IndexPageTemplate.propTypes = {
   profile: PropTypes.object.isRequired,
   mission: PropTypes.object.isRequired,
   camp: PropTypes.object.isRequired,
+  footerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    .isRequired,
+  footerTitle: PropTypes.string.isRequired,
 };
 
 const IndexPage = ({ data }) => {
@@ -166,6 +212,8 @@ const IndexPage = ({ data }) => {
         profile={frontmatter.profile}
         mission={frontmatter.mission}
         camp={frontmatter.camp}
+        footerImage={frontmatter.footerImage}
+        footerTitle={frontmatter.footerTitle}
       />
     </Layout>
   );
@@ -233,6 +281,14 @@ export const pageQuery = graphql`
             }
           }
         }
+        footerImage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        footerTitle
       }
     }
   }
