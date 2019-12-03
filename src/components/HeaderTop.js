@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 900,
   },
   noticeBox: {
+    display: 'block',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -36,6 +37,8 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.main,
     backgroundColor: `rgba(0, 0, 0, .5)`,
     textAlign: 'center',
+    padding: theme.spacing(1),
+    textDecoration: 'none',
   },
 }));
 
@@ -77,11 +80,16 @@ export function HeaderTop(props) {
             Donate Now
           </Button>
           {shownotice && notice && (
-            <Box p={1} className={classes.noticeBox}>
+            <a
+              href="https://myshohola.networkforgood.com/"
+              target="_blank"
+              className={classes.noticeBox}
+              rel="noopener noreferrer"
+            >
               <Typography className={classes.title} variant="h5">
                 {notice}
               </Typography>
-            </Box>
+            </a>
           )}
         </Box>
       </Container>
