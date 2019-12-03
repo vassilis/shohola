@@ -74,7 +74,19 @@ function Footer() {
                 Contact via Email
               </SimpleLink>
               <Box color="white" mt={5}>
-                © 2019 Shohola Scholarship // All Rights Reserved.
+                © 2019 Shohola Scholarship // All Rights Reserved
+                <br />
+                <Box display="inline" mr="5px">
+                  Website offered by
+                </Box>
+                <SimpleLink
+                  className={classes.link}
+                  href="https://futurefeed.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FutureFeed
+                </SimpleLink>
               </Box>
             </Grid>
             <Grid item lg={5}>
@@ -97,7 +109,7 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Camp Shohola Facebook Page
+                  Camp Shohola Official Facebook Page
                 </SimpleLink>
                 <br />
                 <SimpleLink
@@ -116,6 +128,16 @@ function Footer() {
                   rel="noopener noreferrer"
                 >
                   Camp Shohola Professional Network
+                </SimpleLink>
+                <br />
+                <br />
+                <SimpleLink
+                  className={classes.link}
+                  href="https://www.shohola.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Official Camp Shohola Website
                 </SimpleLink>
               </section>
             </Grid>

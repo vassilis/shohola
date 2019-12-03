@@ -73,7 +73,7 @@ function Social() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Shohola Professional Network
+                  Camp Shohola Professional Network
                 </Link>
                 <img
                   src={IconLinkedin}
@@ -121,7 +121,7 @@ function Social() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Shohola on Instagram
+                  Camp Shohola on Instagram
                 </Link>
               </Box>
             </Grid>
