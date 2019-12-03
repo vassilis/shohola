@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconFacebook from '../img/icon-facebook.svg';
 import IconInstagram from '../img/icon-instagram.svg';
 import IconLinkedin from '../img/icon-linkedin.svg';
+import IconShohola from '../img/icon-shohola.svg';
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -14,6 +15,13 @@ const useStyles = makeStyles(theme => ({
   icon: {
     maxWidth: 100,
     marginRight: 20,
+    marginLeft: 20,
+  },
+  link: {
+    textDecoration: 'underline',
+    '&:hover': {
+      textDecoration: 'none',
+    },
   },
 }));
 
@@ -31,9 +39,51 @@ function Social() {
           Social Network
         </Typography>
         <Box mt={5}>
-          <Grid container spacing={5}>
-            <Grid item lg={4}>
-              <Box display="flex" alignItems="center">
+          <Grid container spacing={10}>
+            <Grid item lg={6}>
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+                mb={3}
+              >
+                <Link
+                  className={classes.link}
+                  href="https://www.shohola.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Official Camp Shohola Website
+                </Link>
+                <img
+                  src={IconShohola}
+                  alt="Camp Shohola"
+                  className={classes.icon}
+                />
+              </Box>
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="flex-end"
+                mb={3}
+              >
+                <Link
+                  className={classes.link}
+                  href="https://www.linkedin.com/groups/8861885/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Shohola Professional Network
+                </Link>
+                <img
+                  src={IconLinkedin}
+                  alt="Linked In"
+                  className={classes.icon}
+                />
+              </Box>
+            </Grid>
+            <Grid item lg={6}>
+              <Box display="flex" alignItems="center" mb={3}>
                 <img
                   src={IconFacebook}
                   alt="Facebook"
@@ -46,7 +96,7 @@ function Social() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Shohola Facebook Page
+                    Official Camp Shohola Facebook Page
                   </Link>
                   <br />
                   <Link
@@ -55,13 +105,11 @@ function Social() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Shohola Alumni Facebook Group
+                    Camp Shohola Alumni Facebook Group
                   </Link>
                 </Box>
               </Box>
-            </Grid>
-            <Grid item lg={4}>
-              <Box display="flex" alignItems="center">
+              <Box display="flex" alignItems="center" mb={3}>
                 <img
                   src={IconInstagram}
                   alt="Instagram"
@@ -74,23 +122,6 @@ function Social() {
                   rel="noopener noreferrer"
                 >
                   Shohola on Instagram
-                </Link>
-              </Box>
-            </Grid>
-            <Grid item lg={4}>
-              <Box display="flex" alignItems="center">
-                <img
-                  src={IconLinkedin}
-                  alt="Linked In"
-                  className={classes.icon}
-                />
-                <Link
-                  className={classes.link}
-                  href="https://www.linkedin.com/groups/8861885/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Shohola Professional Network
                 </Link>
               </Box>
             </Grid>
