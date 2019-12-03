@@ -29,7 +29,7 @@ function Social() {
   const classes = useStyles();
   return (
     <Container fixed>
-      <Box id="get-involved" bgcolor="white" borderRadius={5} my={5} p={4}>
+      <Box id="social" bgcolor="white" borderRadius={5} my={5} p={4}>
         <Typography
           className={classes.title}
           gutterBottom
